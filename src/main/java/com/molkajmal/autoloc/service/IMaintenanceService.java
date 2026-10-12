@@ -4,7 +4,7 @@ import com.molkajmal.autoloc.domain.Maintenance;
 
 import java.util.List;
 
-public interface IMaintenance {
+public interface IMaintenanceService {
     List<Maintenance> retrieveAllMaintenances();
     Maintenance addMaintenance(Maintenance c);
     Maintenance updateMaintenance(Maintenance c);

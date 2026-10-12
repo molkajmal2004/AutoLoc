@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IVehiculeService {
     List<Vehicule> retrieveAllVehicules();
-    Vehicule addVehicule(Vehicule c);
-    Vehicule updateVehicule(Vehicule c);
+    Vehicule addVehicule(Vehicule v);
+    Vehicule updateVehicule(Vehicule v);
     Vehicule retrieveVehicule(Long idVehicule);
     void removeVehicule(Long idVehicule);
-    List<Vehicule> addVehicules (List<Vehicule> Vehicules);
+    List<Vehicule> addVehicules(List<Vehicule> vehicules);
 }

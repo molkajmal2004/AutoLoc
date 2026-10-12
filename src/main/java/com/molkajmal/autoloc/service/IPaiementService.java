@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IPaiementService {
     List<Paiement> retrieveAllPaiements();
-    Paiement addPaiement(Paiement c);
-    Paiement updatePaiement(Paiement c);
+    Paiement addPaiement(Paiement p);
+    Paiement updatePaiement(Paiement p);
     Paiement retrievePaiement(Long idPaiement);
     void removePaiement(Long idPaiement);
-    List<Paiement> addPaiements (List<Paiement> Paiements);
+    List<Paiement> addPaiements(List<Paiement> paiements);
 }

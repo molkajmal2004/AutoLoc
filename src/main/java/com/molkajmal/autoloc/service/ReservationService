@@ -1,0 +1,45 @@
+package com.molkajmal.autoloc.service;
+
+import com.molkajmal.autoloc.domain.Reservation;
+import com.molkajmal.autoloc.repository.ReservationRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class ReservationService implements IReservationService {
+
+    final ReservationRepository reRepo;
+
+    @Override
+    public List<Reservation> retrieveAllReservations() {
+        return (List<Reservation>) reRepo.findAll();
+    }
+
+    @Override
+    public Reservation addReservation(Reservation r) {
+        return reRepo.save(r);
+    }
+
+    @Override
+    public Reservation updateReservation(Reservation r) {
+        return reRepo.save(r);
+    }
+
+    @Override
+    public Reservation retrieveReservation(Long idReservation) {
+        return reRepo.findById(idReservation).orElse(null);
+    }
+
+    @Override
+    public void removeReservation(Long idReservation) {
+        reRepo.deleteById(idReservation);
+    }
+
+    @Override
+    public List<Reservation> addReservations(List<Reservation> reservations) {
+        return (List<Reservation>) reRepo.saveAll(reservations);
+    }
+}
